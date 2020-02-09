@@ -47,9 +47,14 @@ class Queue {
 
 
   // assume the queue is non-empty when this method is called
- /* public int deQueue() {
-   do yourself
-  }*/
+  public int deQueue() {
+    int x = head.data;
+    head = head.next;
+     if (head == head.next)
+        tail = null;
+    
+    return x;
+  }
 
 
   /*public boolean isEmpty() {
@@ -72,6 +77,8 @@ class QueueTest {
        q.enQueue( i);
     }
 
+    q.display();
+    q.deQueue();
     q.display();
 
    /* if( ! q.isEmpty())

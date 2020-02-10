@@ -57,9 +57,9 @@ class Queue {
   }
 
 
-  /*public boolean isEmpty() {
-    do yourself
-  }*/
+  public boolean isEmpty() {
+    return head == null;
+  }
 
 } // end of Queue class
 
@@ -76,18 +76,16 @@ class QueueTest {
     for (int i = 9; i > 0; --i) {
        q.enQueue( i);
     }
-
+    
     q.display();
-    q.deQueue();
-    q.display();
-
-   /* if( ! q.isEmpty())
+    
+    if( ! q.isEmpty())
         System.out.println("Deleting value from queue " + q.deQueue() + "\n");
 
     System.out.println("Adding value to queue " + 27 + "\n");
     q.enQueue(27);
     q.display();
-*/
+
   }
 
 } //end of Test class

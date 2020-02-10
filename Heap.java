@@ -33,14 +33,18 @@ void siftUp( int k) {
 }
 
 
-/*
+
 void siftDown( int k) {
    int v, j;
    v = a[k];
    // complete yourself
-  
+   while(v <a[k*2]){
+      a[k]= a[k*2];
+      k = k*2;
+   }
+   a[k] = v ;
 }
-*/
+
 
 void insert( int x) {
    a[++N] = x;
@@ -83,6 +87,13 @@ public static void main(String args[]) {
       h.insert(r);
 	  h.display();
    } 
+
+   
+  //removing variables
+  for(int i = 0; i < 5; i++){
+     System.out.println("removing :"+ h.remove());
+     h.display();
+  }
 }
 
 

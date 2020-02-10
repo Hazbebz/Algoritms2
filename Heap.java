@@ -25,18 +25,22 @@ void siftUp( int k) {
    a[0] = Integer.MAX_VALUE;
 
    // complete yourself from pseudocode in notes
-   
+   while(v > a[k/2]){
+      a[k] = a[k/2];
+      k = k/2;
+   }
+   a[k] = v;
 }
 
 
-
+/*
 void siftDown( int k) {
    int v, j;
    v = a[k];
    // complete yourself
   
 }
-
+*/
 
 void insert( int x) {
    a[++N] = x;

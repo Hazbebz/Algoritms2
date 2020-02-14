@@ -38,11 +38,25 @@ void siftDown( int k) {
    int v, j;
    v = a[k];
    // complete yourself
-   while(v <a[k*2]){
-      a[k]= a[k*2];
-      k = k*2;
-   }
-   a[k] = v ;
+  while(k <= N/2){
+     j = 2 * k;
+
+     if(j < N || a[j] < a[j + 1]){
+      j++;
+     }
+
+     if(v > a[j]){
+        break;
+     }
+     a[k] = a[j];
+     k = j;
+  }
+  a[k] = v;
+  
+      
+   
+     
+  
 }
 
 

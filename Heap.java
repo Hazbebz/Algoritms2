@@ -38,17 +38,17 @@ void siftDown( int k) {
    int v, j;
    v = a[k];
    // complete yourself
-  while(k <= N/2){
-     j = 2 * k;
+  while(k <= N/2){//while node at pos k has a left child 
+     j = 2 * k; 
 
-     if(j < N || a[j] < a[j + 1]){
-      j++;
+     if(j < N || a[j] < a[j + 1]){ //j is less than max size and a pos j(left child) is left then aa pos j plus 1(right child)
+      j++;//increment j 
      }
 
      if(v > a[j]){
         break;
      }
-     a[k] = a[j];
+     a[k] = a[j];//assign next pos to be tested (a[j])
      k = j;
   }
   a[k] = v;

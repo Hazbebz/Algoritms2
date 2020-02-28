@@ -79,10 +79,13 @@ class GraphMatrix
 
 
     // method to initialise Depth First Traversal of Graph
-    public void DF( int s) 
+    public void DF(int s) 
     {
         id = 0;
-        
+        for(int v = 1;v<=V; v++)
+            visited[v] = 0;
+    
+        dfVisit(null, visited[s]);
         
     }
 
@@ -90,6 +93,10 @@ class GraphMatrix
     // Recursive Depth First Traversal for adjacency matrix
     private void dfVisit( int prev, int v)
     {
+        visited[v] = ++id;
+        System.out.println("Visited vertex "+ v +" along edge"+ prev +"--"+ v);
+
+        for()
 
     }
 

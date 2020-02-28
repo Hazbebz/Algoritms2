@@ -56,6 +56,13 @@ class GraphMatrix
             System.out.println("Edge " + toChar(u) + "--(" + wgt + ")--" + toChar(v));    
             // write code to put edge into adjacency matrix     
             // missing code here            
+            adj[u][v]= wgt;
+            adj[v][u]= wgt;//these parts do not apply for a two dementional array
+            /*Node t = new Node;
+            t.vert = v; 
+            t.wgt = wgt; 
+            t.next = adj[u]; //new head of the list 
+            */
         }	       
     }
 
@@ -82,10 +89,10 @@ class GraphMatrix
     public void DF(int s) 
     {
         id = 0;
-        for(int v = 1;v<=V; v++)
-            visited[v] = 0;
+        for(int v = 1; v==V; v++)//first vertex to the last vertex
+            visited[v] = 0;//no verticies have been visited initially
     
-        dfVisit(null, visited[s]);
+        dfVisit(0,s);//if the 0 is present it lets you know there is no vertex before it 
         
     }
 
@@ -94,10 +101,14 @@ class GraphMatrix
     private void dfVisit( int prev, int v)
     {
         visited[v] = ++id;
-        System.out.println("Visited vertex "+ v +" along edge"+ prev +"--"+ v);
+        System.out.println("Visited vertex "+ toChar(v) +" along edge "+ toChar(prev) +" -- "+ v);
+        
+        for(int u = 1; u<=V;++u){//Capital V used as it is the amount of the verticies in the graph
+            if(adj[v][u] != 0 && visited[u] == 0)//if the adjacency matrix has verticies and has not visited any verticies u
+                dfVisit(v, u);//visit u from v
 
-        for()
-
+        }
+      
     }
 
 
@@ -108,9 +119,8 @@ class GraphMatrix
 
         GraphMatrix g = new GraphMatrix(fname);
        
-        // g.display();
-        
-        // g.DF(s);
+        g.display();
+        g.DF(s);
         // g.BF
     }
 

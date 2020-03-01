@@ -24,20 +24,20 @@ class SortedLL
     public void insert(int x)
     {
         Node prev, curr, t;
-        t = new Node();
-        t.data = x;
+        t = new Node();//create new temporary node
+        t.data = x;//data component
         
-        z.data = x; prev = null; curr = head;
-        while(curr.data < x) {
+        z.data = x; prev = null; curr = head;//reassigns new pointers for insertion
+        while(curr.data < x) {//while loop to sift through LL and continually reassign pointers according to order
             prev = curr;
             curr = curr.next;
         }
         t.next = curr;
         
-        if(prev == null) 
+        if(prev == null)//if the list is empty 
             head = t;
         else
-            prev.next = t;                    
+            prev.next = t;//asssign node in list                 
     }    
     
 
@@ -64,10 +64,10 @@ class SortedLL
 
 
     public boolean isEmpty() {
-        return head == z;
+        return head == z;//retruns the heas node if the head points to the dummy node 
     }
     
-    public void display()
+    public void display()//displays all items in the linked list 
     {
         Node t = head;
         System.out.print("\nHead -> ");

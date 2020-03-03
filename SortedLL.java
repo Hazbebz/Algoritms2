@@ -102,7 +102,9 @@ class SortedLL
                 System.out.println("\nSuccessfully removed: " + r);
                 list.display(); }
             else 
-                System.out.println("\nValue not in list");                        
+                System.out.println("\nValue not in list"); 
         }
+        
     }
+    
 }

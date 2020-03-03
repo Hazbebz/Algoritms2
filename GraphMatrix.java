@@ -63,7 +63,7 @@ class GraphMatrix
             t.wgt = wgt; 
             t.next = adj[u]; //new head of the list 
             */
-        }	       
+        }     
     }
 
 	// convert vertex into char for pretty printing
@@ -123,5 +123,5 @@ class GraphMatrix
         g.DF(s);
         // g.BF
     }
-
+    
 }

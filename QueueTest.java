@@ -60,7 +60,16 @@ class Queue {
   public boolean isEmpty() {
     return head == null;
   }
-
+  
+  public int size(){
+    Node temp = head;
+    int Size = 0;
+    while(temp !=temp.next){
+      temp = temp.next;
+      Size += 1;
+    }
+    return Size;
+  }
 } // end of Queue class
 
 
@@ -85,6 +94,7 @@ class QueueTest {
     System.out.println("Adding value to queue " + 27 + "\n");
     q.enQueue(27);
     q.display();
+    System.out.println("This is size of the queue is "+ q.size());
 
   }
 

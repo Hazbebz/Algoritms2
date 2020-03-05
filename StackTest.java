@@ -1,5 +1,4 @@
-import java.util.EmptyStackException;
-import java.util.Scanner;
+import java.util.*;
 
 
 // StackTest.java
@@ -64,21 +63,19 @@ class Stack {
         //Console.Write("\n");
         System.out.println("\n");
     }//end display()
+
     
-    /*
     public boolean isMember(int x){
-        
-        Node t = top;
-        while(t!= null){
-            t = t.next;
-            if(x == t.data){
+        Node current = top;
+        while(current != null){
+            if(x == current.data)
                 return true;
-            }
             else
-                return false;
+                current= current.next;
         }
+        return false;
     }
-    */
+    
 }
 
 
@@ -95,12 +92,14 @@ public class StackTest
         
         int i = s.pop();
         int j = s.size();
-        s.isMember(10);
+        
+        
         
         //Console.Write("\nJust popped {0}", i);
         System.out.println("Just popped " + i);
         System.out.println("Stack size is " + j);
-        System.out.println("is Member result "+ x);
+        //System.out.println("Does the stack contain the number 10 "+ s.contains(10));
+        System.out.println("is Member result "+ s.isMember(7));
         //s.display();
     }
 }

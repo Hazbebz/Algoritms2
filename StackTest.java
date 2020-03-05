@@ -1,3 +1,7 @@
+import java.util.EmptyStackException;
+import java.util.Scanner;
+
+
 // StackTest.java
 // Linked list implementation of Stack
 
@@ -60,7 +64,21 @@ class Stack {
         //Console.Write("\n");
         System.out.println("\n");
     }//end display()
-
+    
+    /*
+    public boolean isMember(int x){
+        
+        Node t = top;
+        while(t!= null){
+            t = t.next;
+            if(x == t.data){
+                return true;
+            }
+            else
+                return false;
+        }
+    }
+    */
 }
 
 
@@ -77,10 +95,12 @@ public class StackTest
         
         int i = s.pop();
         int j = s.size();
+        s.isMember(10);
         
         //Console.Write("\nJust popped {0}", i);
         System.out.println("Just popped " + i);
         System.out.println("Stack size is " + j);
+        System.out.println("is Member result "+ x);
         //s.display();
     }
 }

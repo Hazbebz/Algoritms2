@@ -12,7 +12,7 @@ class Queue {
     Node head;
     Node tail;
 
-     public Queue() {
+    public Queue() {
         z = new Node(); z.next = z;
         head = z;  tail = null;
     }

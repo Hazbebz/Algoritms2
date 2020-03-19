@@ -1,5 +1,3 @@
-import java.util.*;
-
 
 // StackTest.java
 // Linked list implementation of Stack

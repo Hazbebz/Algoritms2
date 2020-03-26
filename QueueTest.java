@@ -1,7 +1,7 @@
 // QueueTest.java
 // Allocation of Queue objects in main()
 
-class Queue {
+class QueueTest {
 
     private class Node {
         int data;
@@ -12,7 +12,7 @@ class Queue {
     Node head;
     Node tail;
 
-    public Queue() {
+    public QueueTest() {
         z = new Node(); z.next = z;
         head = z;  tail = null;
     }
@@ -74,12 +74,12 @@ class Queue {
 
 
 
-class QueueTest {
+class Queue {
   
   // try out the ADT Queue using static allocation
   public static void main(String[] arg) {
 
-    Queue q = new Queue();
+    QueueTest q = new QueueTest();
 
     System.out.println("Inserting ints from 9 to 1 into queue gives:\n");
     for (int i = 9; i > 0; --i) {
